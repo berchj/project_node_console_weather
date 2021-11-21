@@ -56,11 +56,11 @@ const readInput = async (input) => {
   const { desc } = await inquirer.prompt(question)
   return desc
 }
-const deleteOptions = async (tasks = []) => {
-  const choices = tasks.map((task, i) => {
+const listPlaces = async (places = []) => {
+  const choices = places.map((task, i) => {
     return {
-      value: `${task.id}`,
-      name: `${i + 1}. ${task['description']}`,
+      value: `${places.id}`,
+      name: `${i + 1}. ${places['name']}`,
 
     }
   })
